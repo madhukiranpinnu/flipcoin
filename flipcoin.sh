@@ -18,4 +18,14 @@ do
 done
 echo "head count" $(($headcount-1))
 echo "tailcount" $(($tailcount-1))
+points=$(($headcount - $tailcount))
+if [ $headcount -gt $tailcount ]
+then
+	echo " head won by" $(($headcount-1))
+elif [ $headcount -le $tailcount ]
+then
+	echo " tail won by " $(($tailcount-1))
+else
+	echo " it is a tie between head and tail"
 
+fi
